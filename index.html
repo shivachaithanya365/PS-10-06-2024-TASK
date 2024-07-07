@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS-PROBLEMS</title>
+    <style>
+        h2,
+        h3 {
+            text-align: center;
+        }
+
+        pre {
+            margin: auto;
+            font-family: 'Courier New', Courier, monospace;
+            background-color: #f4f4f4;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            width: 88%;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>---------- PROMPT OUTPUTS ----------</h2>
+    <script src="./task.js">
+    </script>
+    <h2>Source code :</h2>
+    <pre>
+        <h3>Write a program to rotate the array to right  input:[2,6,12,50] rotationCountInput2:2
+        output: [12,50,2,6]</h3>
+        var input1 = prompt("Enter numbers seperating with spaces : ").split(" ").map(Number);
+        var input2 = +prompt("Enter number of rotations : ");
+        var origInput1 = input1.slice();
+        for (let i = 0; i < input2; i++) {
+                input1.unshift(input1.pop());
+        }
+        
+        console.log(`Rotation of input1 (${origInput1}) to input2 (${input2}) times is : ${input1}`);
+        document.write(`Rotation of input1 (${origInput1}) to input2 (${input2}) times is : ${input1}`)
+
+        <h3>Write a program to find the count of palindromes in the given array.
+        input:[22,122,202,138,2]</h3>
+        var input = prompt("Enter numbers seperating with spaces : ").split(" ").map(Number);
+        var count = 0;
+        for (let i of input) {
+                var str = String(i);
+                if (str.length > 1)
+                 var revStr = str.split("").reverse().join("");
+                if (str === revStr) {
+                        count++;
+                }
+        }
+        console.log(`No. of palindromes in input(${input}) is : ${count}`);
+        document.write(`No. of palindromes in input(${input}) is : ${count}`)
+
+
+    </pre>
+</body>
+
+</html>
